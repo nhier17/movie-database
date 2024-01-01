@@ -37,3 +37,24 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
+### BDD
+
+### Input
+The application does not have an input
+
+### Output
+The movies displayed from API are grouped into different categoried. Clicking on any movie card gives you access to more details about the movie.
+
+## CONTACT INFO;     
+
+## NAME: ABRAHAM NHIER
+        Email:abrahamnhier97@gmail.com
+        Phone: 0716903151
+## Technology Used
+    1.ReactJs
+    2.Javascript
+    3.HTML
+    4.SCSS
+
+## Framework Used
+    Git
