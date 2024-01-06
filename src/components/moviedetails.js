@@ -2,9 +2,10 @@ import React from 'react'
 import styled from "styled-components"
 import {useSelector} from "react-redux"
 import {motion} from "framer-motion"
-import play from "../images/play.jpeg"
+
 import { titleAnim } from './animations'
 import {useNavigate} from "react-router-dom"
+import {FaPlay} from "react-icons/fa"
 
 
 const MovieDetails = () => {
@@ -29,11 +30,11 @@ const MovieDetails = () => {
 <ContentMeta>
     <Content>
         <Player>
-            <img src={play} alt="play"/>
+            <FaPlay/>
             <span>PLAY</span>
         </Player>
         <Trailer>
-            <img src={play} alt="play"/>
+            <FaPlay/>
             <span>TRAILER</span>
         </Trailer>
     </Content>
@@ -119,9 +120,9 @@ cursor: pointer;
 letter-spacing: 1.8px;
 text-align: center;
 border: none;
-img{
-    width: 32px;
-    }
+svg {
+    font-size: 1.5rem;
+}
     &:hover{
         background: lightgrey;
         color: black;

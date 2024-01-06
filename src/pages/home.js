@@ -16,12 +16,22 @@ const Home = () => {
       dispatch(loadMovies())
     },[dispatch])
     //get data
-const {popular,series,topmovies,topseries,actionMovies,comedy,fantasy,comedySeries,disney} = useSelector((state)=> state.movies)
+const {popular,series,topmovies,topseries,actionMovies,comedy,fantasy,comedySeries,disney,upcoming} = useSelector((state)=> state.movies)
 const API_IMG = "https://image.tmdb.org/t/p/original/"
 
     return(
 <MovieList>
     <Banner/>
+    <h1>Upcoming Movies</h1>
+    <Movies>
+        {upcoming.map((movie) =>(
+            <Movie
+            id={movie.id}
+            key={movie.id}
+            image={API_IMG+movie.poster_path}
+            />
+        ))}
+    </Movies>
 <h1>Popular Movies</h1>
     <Movies>
     

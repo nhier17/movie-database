@@ -8,7 +8,8 @@ import {
     comedyMovieURL,
     fantasyURL,
     comedySeriesURL, 
-    disneySpecialsURL
+    disneySpecialsURL,
+    upcomingMoviesURL
     } from "../api";
 
 export const loadMovies = () => async(dispatch) => {
@@ -21,6 +22,7 @@ export const loadMovies = () => async(dispatch) => {
     const fantasyData = await axios.get(fantasyURL());
     const coData = await axios.get(comedySeriesURL());
     const disneyData = await axios.get(disneySpecialsURL());
+    const upcomingData = await axios.get(upcomingMoviesURL());
     dispatch({
         type: "FETCH_MOVIES",
         payload: {
@@ -32,7 +34,8 @@ export const loadMovies = () => async(dispatch) => {
             comedy: comedyData.data.results,
             fantasy: fantasyData.data.results,
             comedySeries: coData.data.results,
-            disney: disneyData.data.results
+            disney: disneyData.data.results,
+            upcoming: upcomingData.data.results
         }
     })
 }

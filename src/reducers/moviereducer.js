@@ -7,7 +7,8 @@ const initState = {
     comedy: [],
     fantasy: [],
     comedySeries: [],
-    disney: []
+    disney: [],
+    upcoming: []
 }
 
 const movieReducer = (state=initState,action) => {
@@ -23,7 +24,8 @@ switch (action.type) {
             comedy: action.payload.comedy,
             fantasy: action.payload.fantasy,
             comedySeries: action.payload.comedySeries,
-            disney: action.payload.disney
+            disney: action.payload.disney,
+            upcoming: action.payload.upcoming
         }
               default:
             return{...state}

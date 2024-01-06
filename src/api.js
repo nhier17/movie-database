@@ -14,6 +14,7 @@ export const comedyMovieURL = () => `${base_url}/discover/movie?api_key=${api_ke
 export const fantasyURL = () => `${base_url}/discover/tv?api_key=${api_key}&with_genres=10765`
 export const movieDetailsURL = (movie_id) => `${base_url}movie/${movie_id}?api_key=${api_key}`
 
+export const upcomingMoviesURL = () =>  `${base_url}movie/upcoming?api_key=${api_key}&page=1&release_date.lte={max_date}`
 //shows
 export const seriesDetailURL = (series_id) => `${base_url}tv/${series_id}?api_key=${api_key}`
 

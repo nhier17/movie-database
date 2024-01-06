@@ -31,7 +31,7 @@ fetchData()
 <Description>{truncate(movie?.overview, 150)}</Description>
 <Details>
 <button>Play</button>
-<button>My List</button>
+<button>More Info</button>
 </Details>
 
     </Container>
