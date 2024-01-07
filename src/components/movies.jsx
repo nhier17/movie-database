@@ -25,9 +25,9 @@ const StyledMovie = styled.div`
 position: relative;
 cursor: pointer;
 display: flex;
-
+padding-left: 1rem;
 img{
-    display: block;
+   display: block;
    min-width:107px;
    max-width: 106px;
    height: 150px;

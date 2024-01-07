@@ -18,7 +18,7 @@ const Series = ({poster,id}) => {
     )
 }
 const StyledSeries = styled.div`
- 
+ padding-left: 1rem;
 cursor: pointer;
 img{
  min-width: 106px;

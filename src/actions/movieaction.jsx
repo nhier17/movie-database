@@ -9,7 +9,8 @@ import {
     fantasyURL,
     comedySeriesURL, 
     disneySpecialsURL,
-    upcomingMoviesURL
+    upcomingMoviesURL,
+
     } from "../api";
 
 export const loadMovies = () => async(dispatch) => {
@@ -39,3 +40,4 @@ export const loadMovies = () => async(dispatch) => {
         }
     })
 }
+

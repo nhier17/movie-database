@@ -27,6 +27,12 @@ switch (action.type) {
             disney: action.payload.disney,
             upcoming: action.payload.upcoming
         }
+        
+            case "CLEAR_SEARCHED":
+                return {
+                  ...state,
+                  searched: [],
+                };
               default:
             return{...state}
 }

@@ -1,31 +1,31 @@
 import React from 'react'
 import styled from "styled-components"
-import {useSelector } from "react-redux"
+import {useSelector} from "react-redux"
 import {motion} from "framer-motion"
+
 import { titleAnim } from './animations'
+import {useNavigate} from "react-router-dom"
+import {FaPlay} from "react-icons/fa"
 
-import { useNavigate } from "react-router-dom"
-import { FaPlay } from 'react-icons/fa'
 
-
-const Seriesdetails = () => {
-    const navigate = useNavigate() 
-    const api_image = "https://image.tmdb.org/t/p/original/"
-    const {shows} = useSelector((state) =>state.shows);
+const MovieDetails = () => {
+    const navigate = useNavigate()
+    const API_IMG = "https://image.tmdb.org/t/p/original/"
+    const {movie} = useSelector((state)=>state.detail)
     const exitDetailHandler = (e) => {
-        const element = e.target
-        if (element.classList.contains("shadow")) {
-            document.body.style.overflow = "auto";
-            navigate("/home")
+        const element = e.target;
+        if(element.classList.contains("shadow")) {
+            document.body.style.overflow ="auto"
+            navigate('/home')
         }
     }
-  return (
-    <CardsShadow className='shadow' onClick={exitDetailHandler}>
+    return(
+<CardsShadow className='shadow' onTouchStart={exitDetailHandler} onClick={exitDetailHandler}>
 <Details>
-<img src={api_image+shows.backdrop_path} alt="title"/>
+<img src={API_IMG+movie.backdrop_path} alt="title"/>
 </Details>
 <Stats>
-<h1>{shows.original_name}</h1>
+<h3>{movie.title}</h3>
 </Stats>
 <ContentMeta>
     <Content>
@@ -39,15 +39,16 @@ const Seriesdetails = () => {
         </Trailer>
     </Content>
     <Subtitle variants={titleAnim} initial="hidden" animate="show">
-    <p>Rating: {shows.vote_average}</p>
-    <p>{shows.first_air_date} - {shows.last_air_date}</p>
-    {shows.genres.map((data)=>(
-        <p id={data.id} key={data.id}>{data.name}</p>
-    ))}
+    <p>Rating: {movie.vote_average}</p>
+    <p>{movie.release_date}</p>
+        {movie.genres.map((data) => (
+            <p id={data.id} key={data.id}>{data.name}</p>
+        ))}
+    
     </Subtitle>
     <Description variants={titleAnim} initial="hidden" animate="show">
-    <p>{shows.overview}</p>
-    </Description>
+    <motion.p>{movie.overview}</motion.p>
+     </Description>
 </ContentMeta>
 </CardsShadow>
     )
@@ -62,19 +63,18 @@ top: 72px;
 padding: 0 calc(3.5vw - 5px);
 `
 const Details = styled.div`
-left: 0;
+left: 0px;
 opacity: 0.8;
 position: fixed;
 right: 0;
 top: 0;
 z-index: -1;
 img{
-      width: 100vw; 
+    width: 100vw; 
     height: 100vh;
     
     @media (max-width: 768px) {
         width: 100%;
-       
     }
 }
 `
@@ -88,9 +88,14 @@ height: 30vw;
 min-height: 170px;
 padding-bottom: 24px;
 width: 100%;
-h1{
-    color: white;
-    font-size: 20px;
+img{
+    max-width: 600px;
+    min-width: 200px;
+    width: 35vw;
+}
+h3{
+    color: goldenrod;
+    font-size: 2rem;
 }
 `
 const ContentMeta = styled.div`
@@ -140,11 +145,15 @@ color: lightgrey;
 `
 const Subtitle = styled.div`
 display: flex;
+flex-wrap: nowrap;
 gap: 1rem;
 justify-content: flex-start;
 color: rgb(249,249,249);
 font-size: 15px;
-min-height: 20px;
+
+h3{
+    color: white;
+    }
     p{
         color: white;
         font-family: 'Bebas Neue', sans-serif;
@@ -162,15 +171,11 @@ padding: 16px 0;
 color: rgb(249,249,249);
 p{
     color: white;
-    font-family: 'Lato',sans-serif;
+    font-family: 'Lato',sans-serif
 }
 
 @media (max-width: 768px) {
     font-size: 14px;
 }
 `
-
-  
-
-
-export default Seriesdetails
+export default MovieDetails

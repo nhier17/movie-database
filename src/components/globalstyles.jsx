@@ -11,10 +11,10 @@ const GlobalStyles = createGlobalStyle`
             width: 0.5rem;
         }
         &::-webkit-scrollbar-thumb{
-            background-color: black;
+            background-color: grey;
         }
         &::-webkit-scrollbar-track {
-    background: black;
+    background: grey;
   }
     }
     body{
@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         height:auto;
         width: auto;
-        background: #040714;
+        background: rgb(20, 20, 20);
         font-family: 'Bebas Neue', sans-serif;
         font-size: 19px;
         
@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
         display: block;
     }
     input{
-        font-weight: bold;
+       font-weight: bold;
     font-family: "Montserrat", sans-serif;
     }
     

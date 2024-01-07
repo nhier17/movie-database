@@ -137,16 +137,15 @@ const API_IMG = "https://image.tmdb.org/t/p/original/"
 }
 
 const MovieList = styled(motion.div)`
-background-color: black;
+background-color: rgb(20, 20, 20);
 width: 100%;
 position: relative;
-padding: 0rem 1rem 26px;
-
 
 h1{
     color: #E5E5E5;
     font-size: 19.11px;
     padding: 1rem 0rem;
+    padding-left: 1rem;
   
 }
 
@@ -156,7 +155,7 @@ const Movies = styled(motion.div)`
 display: inline-block;
 overflow: scroll;
 scrollbar-color: black;
-background-color: black;
+background-color: rgb(20, 20, 20);
 white-space: nowrap;
 padding-bottom: 0px;
 display: flex;
@@ -164,6 +163,23 @@ gap: 1rem;
 &::-webkit-scrollbar{
     display: none;
 }
+img{
+    display: block;
+   min-width:107px;
+   max-width: 106px;
+   height: 150px;
+   margin-bottom: 1rem;
+    transition: transform 450ms;
+    border-radius: 1rem;
+    top: 0;
+    z-index: 1;
+    &:hover{
+transform: scale(1.08);
+opacity: 1;
+
+}
+}
+
 @media (max-width: 768px) {
     margin-bottom: 0;
 }
