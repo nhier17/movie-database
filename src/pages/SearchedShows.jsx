@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import  { useParams } from "react-router-dom"
+import  {  useParams } from "react-router-dom"
 import { api_key } from '../api'
 import styled from "styled-components"
 
@@ -25,17 +25,16 @@ function SearchedShows() {
     <div>
         {searchedShows.map((movie)=> {
             return (
-            <Card key={movie.id}>
+            <Card key={movie.id} >
                 <Flex>
-                <img src={API_IMG+movie.backdrop_path} alt={movie.title}/>
+                <img src={API_IMG+movie.poster_path} alt={movie.title}/>
                 <Container>
                 <h4>{movie.original_title}</h4>
                 <p>{movie.release_date}</p>
                 <p>{movie.overview}</p>
                 </Container>
                 </Flex>
-                
-            </Card>
+                 </Card>
             )
         })}
     </div>
