@@ -19,6 +19,8 @@ const MovieDetails = () => {
             navigate('/home')
         }
     }
+
+
     return(
 <CardsShadow className='shadow' onTouchStart={exitDetailHandler} onClick={exitDetailHandler}>
 <Details>

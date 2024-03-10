@@ -47,12 +47,12 @@ a {
     text-decoration: none;
 }
 img{
- min-width: 200px;
- max-width: 200px;
+ min-width: 300px;
+ max-width: 300px;
  border-radius: 1rem;
  margin-top: 1rem;
  margin-bottom: 1rem;
- height: 250px;
+ height: 330px;
  background-size: cover;
  background-color: lightgreen;
  transition: transform 450ms;
@@ -89,5 +89,6 @@ margin-top: 5rem;
     `
  const Container = styled.div`
 margin-top: 1rem;
+
  `   
 export default SearchedShows

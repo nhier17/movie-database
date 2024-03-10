@@ -5,13 +5,12 @@ import Movie from "../components/movies";
 import styled from "styled-components"
 import {motion} from "framer-motion"
 import Series from "../components/series";
-import Banner from "../components/banner";
+import Banner from "../components/Banner";
 
 
 
 const Home = () => {
-    
-    const dispatch = useDispatch();
+ const dispatch = useDispatch();
     useEffect(()=>{
       dispatch(loadMovies())
     },[dispatch])

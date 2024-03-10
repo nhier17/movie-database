@@ -1,5 +1,5 @@
 const initialState = {
-    movie: {genres: [], networks: []}
+    movie: {genres: [], videos:{results: [19]}}
 }
 
 const detailReducer = (state = initialState,action) => {
