@@ -8,7 +8,6 @@ import Series from "../components/series";
 import Banner from "../components/Banner"
 
 
-
 const Home = () => {
  const dispatch = useDispatch();
     useEffect(()=>{
