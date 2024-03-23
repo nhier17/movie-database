@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import axios from "axios"
 import { popularMoviesURL } from '../api';
 import styled from "styled-components"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 
 const Banner= () => {
@@ -76,7 +76,7 @@ const Details = styled(motion.div)`
 
 button{
     cursor: pointer;
-    color: bblack;
+    color: black;
     outline: none;
     border: none;
     font-weight: 700;
