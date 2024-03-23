@@ -10,7 +10,6 @@ import SearchedShows from "./pages/SearchedShows";
 
 
 function App() {
-
   return (
     <div className="App">
       <GlobalStyles/>
