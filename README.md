@@ -1,4 +1,4 @@
-# Project Name: MOVIE DATABASE 
+# Project Name: MOVIES DATABASE 
 
 
 ## Project Description
