@@ -5,7 +5,7 @@ import Movie from "../components/movies";
 import styled from "styled-components"
 import {motion} from "framer-motion"
 import Series from "../components/series";
-import Banner from "../components/Banner"
+import Banner from "../components/banner"
 
 
 const Home = () => {
