@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from "styled-components"
-import netflix from "../images/netflix.jpeg"
+import { FiMenu } from "react-icons/fi";
 import { Link } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa'
 import {useNavigate} from "react-router-dom"
@@ -27,7 +27,7 @@ const Header = () => {
     
     <Nav>
         <Logo>
-          <img onClick={exitHandler} src={netflix} alt="nav"/>
+        <FiMenu onClick={exitHandler} />
         </Logo>
         <NavMenu>
 <Link to="/home">
@@ -73,9 +73,10 @@ margin-top: 4px;
 max-height: 70px;
 display: inline-block;
 cursor: pointer;
-img{
+svg{
     display: block;
-    width: 100%;
+    font-size: 24px;
+    color: white;
     
 }
 @media (max-width: 768px) {
